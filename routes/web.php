@@ -12,11 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+$mhs =[
+    1 => ['nama' => 'jn', 'jurusan' => 'Sistem Informasi'],
+    2 => ['nama' => 'fel', 'jurusan' => 'Sistem Informasi'],
+    3 => ['nama' => 'jos', 'jurusan' => 'Informatika']
+];
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', ['nama' => 'jn', 'jurusan' => 'Sistem Informasi']);
 });
 
 Route::get('/Mahasiswa', function () {
-    return view('welcome');
+    return view('welcome', ['nama' => 'Mahasiswa jn', 'jurusan' => 'Sistem Informasi']);
 });
